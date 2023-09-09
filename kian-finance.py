@@ -406,7 +406,7 @@ class Ui_MainWindow(object):
         self.pushButton_4.clicked.connect(total)
         def daily_total() :
             t1 = int(self.lineEdit_21.text())
-            t2 = int(self.lineEdit_19.text())
+            t2 = float(self.lineEdit_19.text())
             t3 = int(self.lineEdit_17.text())
             t4 = int(self.lineEdit_14.text())
             t5 = int(self.lineEdit_15.text())
