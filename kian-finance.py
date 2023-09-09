@@ -403,7 +403,7 @@ class Ui_MainWindow(object):
            self.lineEdit_13.setText(str(daily))
            self.lineEdit_19.setText(str(daily))
            return (estimated , cost , daily , weekly)
-           
+        self.pushButton_4.clicked.connect(total)   
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
