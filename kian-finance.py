@@ -383,7 +383,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         def total() :
            t1 = int(self.lineEdit.text())
-           t2  = int(self.lineEdit_1.text())
+        #    t2  = int(self.lineEdit.text())
            t3 = int(self.lineEdit_2.text())
            t4 = int(self.lineEdit_3.text())
            t5 = int(self.lineEdit_4.text())
@@ -394,7 +394,7 @@ class Ui_MainWindow(object):
            t10 = int(self.lineEdit_9.text())
            t11 = int(self.clothesLineEdit.text())
            t12 = int(self.lineEdit_10.text())
-           cost = t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11
+           cost =  t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11
            estimated = t1 - cost - t12
            daily = estimated/30
            weekly = estimated/4
