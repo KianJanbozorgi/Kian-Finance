@@ -416,10 +416,18 @@ class Ui_MainWindow(object):
             t9 = int(self.clothesLineEdit_2.text())
             t10 = int(self.lineEdit_22.text())
             cost =  t1 + t3 + t4 + t5 + t6 + t7 + t8 + t9 
+            overbudget = 0
             if cost > t2 :
                 overbudget = cost - t2
                 self.lineEdit_27.setText(str(overbudget))
             self.lineEdit_24.setText(str(cost))
+            date = self.dateEdit.text()
+            m = self.lineEdit_26.text()
+            self.label_36.setText(str(date))
+            self.label_38.setText(str(cost))
+            self.label_40.setText(str(t10))
+            self.label_42.setText(str(overbudget))
+            self.label_43.setText(f"""you were {m} with your expenses""")
         self.pushButton_5.clicked.connect(daily_total)
 
     def retranslateUi(self, MainWindow):
