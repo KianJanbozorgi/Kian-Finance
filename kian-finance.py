@@ -381,7 +381,23 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         self.tabWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-
+        def total() :
+           t1 = self.lineEdit.text()
+           t2  = self.lineEdit_1.text()
+           t3 = self.lineEdit_2.text()
+           t4 = self.lineEdit_3.text()
+           t5 = self.lineEdit_4.text()
+           t6 = self.lineEdit_5.text()
+           t7 = self.lineEdit_6.text()
+           t8 = self.lineEdit_7.text()
+           t9 = self.lineEdit_8.text()
+           t10 = self.lineEdit_9.text()
+           t11 = self.clothesLineEdit.text()
+           t12 = self.lineEdit_10.text()
+           cost = t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11
+           estimated = t1 - cost - t12
+           return (estimated , cost)
+           
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
