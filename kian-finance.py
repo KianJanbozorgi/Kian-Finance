@@ -382,21 +382,27 @@ class Ui_MainWindow(object):
         self.tabWidget.setCurrentIndex(4)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
         def total() :
-           t1 = self.lineEdit.text()
-           t2  = self.lineEdit_1.text()
-           t3 = self.lineEdit_2.text()
-           t4 = self.lineEdit_3.text()
-           t5 = self.lineEdit_4.text()
-           t6 = self.lineEdit_5.text()
-           t7 = self.lineEdit_6.text()
-           t8 = self.lineEdit_7.text()
-           t9 = self.lineEdit_8.text()
-           t10 = self.lineEdit_9.text()
-           t11 = self.clothesLineEdit.text()
-           t12 = self.lineEdit_10.text()
+           t1 = int(self.lineEdit.text())
+           t2  = int(self.lineEdit_1.text())
+           t3 = int(self.lineEdit_2.text())
+           t4 = int(self.lineEdit_3.text())
+           t5 = int(self.lineEdit_4.text())
+           t6 = int(self.lineEdit_5.text())
+           t7 = int(self.lineEdit_6.text())
+           t8 = int(self.lineEdit_7.text())
+           t9 = int(self.lineEdit_8.text())
+           t10 = int(self.lineEdit_9.text())
+           t11 = int(self.clothesLineEdit.text())
+           t12 = int(self.lineEdit_10.text())
            cost = t2 + t3 + t4 + t5 + t6 + t7 + t8 + t9 + t10 + t11
            estimated = t1 - cost - t12
-           return (estimated , cost)
+           daily = estimated/30
+           weekly = estimated/4
+           self.lineEdit_11.setText(str(cost))
+           self.lineEdit_12.setText(str(weekly))
+           self.lineEdit_13.setText(str(daily))
+           self.lineEdit_19.setText(str(daily))
+           return (estimated , cost , daily , weekly)
            
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
