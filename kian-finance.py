@@ -403,7 +403,25 @@ class Ui_MainWindow(object):
            self.lineEdit_13.setText(str(daily))
            self.lineEdit_19.setText(str(daily))
            return (estimated , cost , daily , weekly)
-        self.pushButton_4.clicked.connect(total)   
+        self.pushButton_4.clicked.connect(total)
+        def daily_total() :
+            t1 = int(self.lineEdit_21.text())
+            t2 = int(self.lineEdit_19.text())
+            t3 = int(self.lineEdit_17.text())
+            t4 = int(self.lineEdit_14.text())
+            t5 = int(self.lineEdit_15.text())
+            t6 = int(self.lineEdit_16.text())
+            t7 = int(self.lineEdit_18.text())
+            t8 = int(self.lineEdit_23.text())
+            t9 = int(self.clothesLineEdit_2.text())
+            t10 = int(self.lineEdit_22.text())
+            cost =  t1 + t3 + t4 + t5 + t6 + t7 + t8 + t9 
+            if cost > t2 :
+                overbudget = cost - t2
+                self.lineEdit_27.setText(str(overbudget))
+            self.lineEdit_24.setText(str(cost))
+        self.pushButton_5.clicked.connect(daily_total)
+
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
